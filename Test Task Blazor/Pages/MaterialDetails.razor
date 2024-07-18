@@ -1,0 +1,27 @@
+﻿@* @page "/materials/{urlProposalMaterialId:int?}"
+<PageTitle>@material.MaterialName | TestTask</PageTitle>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            @if (notFound)
+            {
+                <div class="d-flex justify-content-center flex-column align-items-center" style="min-height: 250px">
+                    <h3>Not found</h3>
+                    <NavLink href="/" class="btn btn-primary">Click here to see the latest blog posts</NavLink>
+                </div>
+            }
+            else if(material?.Id > 0)
+            {
+                var color = Blazorise.Utilities.GetRandomColorClass();
+                var categoryTitle = $"{material.MaterialName} Материалы";
+
+                <h1 class="fs-1 bg-@color text-white p-5 rounded">@material.MaterialName</h1>
+
+@code {
+	[Parameter]
+	public int Id { get; set; }
+	private ProposalMaterial proposalMaterial = new();
+	private bool notFound = false;
+
+}
+ *@

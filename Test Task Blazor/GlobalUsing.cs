@@ -1,0 +1,9 @@
+﻿global using Test_Task_Blazor;
+global using Test_Task_Blazor.Data;
+global using Test_Task_Blazor.Data.Entities;
+global using Test_Task_Blazor.Services;
+global using Test_Task_Blazor.Models;
+global using Test_Task_Blazor.Components;
+global using Blazorise;
+global using Blazorise.Bootstrap5;
+global using Blazorise.Icons.FontAwesome;

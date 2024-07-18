@@ -1,0 +1,119 @@
+﻿@page "/manage-materials/new"
+@page "/manage-materials/edit/{urlProposalMaterialId:int?}"
+
+@inject MaterialPostServices MaterialPostServices
+@inject NavigationManager NavigationManager
+<div class="container">
+	<div class="d-flex justify-content-between align-items-center">
+		<h3>Сохранить материал</h3>
+		<NavLink href="/manage-materials" class="btn btn-primary btn-sm">Назад</NavLink>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			@if(_isLoading)
+			{
+				<div class="d-flex align-items-center">
+						<div class="text-center">
+						<div class="spinner-border" role="status">
+					<span class="visually-hidden">Loading...</span>
+						</div>
+						</div>
+				</div>
+			}
+			else{
+			<EditForm Model="model" OnValidSubmit="SaveProposalMaterialAsync">
+				<DataAnnotationsValidator />
+
+				<div class="md-3">
+					<label class="from-labol">Название:</label>
+					<InputText @bind-Value="model.MaterialName" class="form-control" placeholder="Введите название"/>
+					<ValidationMessage For="()=>model.MaterialName"/>
+				</div>
+				<div class="md-3">
+					<label class="from-labol">Код:</label>
+					<InputText @bind-Value="model.MaterialCode" class="form-control" placeholder="Введите Код" MaxLength="10" />
+					<ValidationMessage For="()=>model.MaterialCode" />
+				</div>
+				<div class="md-3">
+					<label class="from-labol">Количество:</label>
+					<InputNumber @bind-Value="model.Quantity" class="form-control"  Max="1" />
+					<ValidationMessage For="()=>model.Quantity" />
+				</div>
+				<div class="md-3">
+					<label class="from-labol">Коментарий:</label>
+					<InputText @bind-Value="model.Comment" class="form-control" placeholder="Введите Коментарий" />
+					<ValidationMessage For="()=>model.Comment" />
+				</div>
+				@if (!string.IsNullOrEmpty(errorMasage))
+				{
+					<p class="text-danger">@errorMasage</p>
+				}
+				<div>
+					<h3></h3>
+				</div>
+				<div class="mb-3 d-flex justify-content-between">
+					<button type="reset" class="btn btn-danger">Отменить</button>
+					<button type="submit" class="btn btn-success">Сохранить</button>
+				</div>
+			</EditForm>
+			}
+		</div>
+
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public int? urlProposalMaterialId { get; set; }
+
+	private int proposalMaterialId => urlProposalMaterialId ?? 0;
+	private ProposalMaterial model = new();
+
+	private bool _isLoading;
+	private string? errorMasage = null;
+	protected override async Task OnInitializedAsync()
+	{
+		if (proposalMaterialId>0)
+		{
+			//
+			var dbModel = await MaterialPostServices.GetProposalMaterialAsync(proposalMaterialId);
+			if (dbModel is null)
+			{
+				errorMasage = "Неверный адрес";
+			}
+			else
+			{
+				//model = dbModel;
+			}
+		}
+		else
+		{
+			
+		}
+	}
+	private async Task SaveProposalMaterialAsync()
+	{
+		_isLoading = true;
+		try
+		{
+			var result = await MaterialPostServices.SaveAsync(model);
+			if (result.Status)
+			{
+				NavigationManager.NavigateTo("/manage-materials");
+				return;
+			}
+			else
+			{
+				errorMasage = result.ErrorMassage ?? "Ошибка при сохранении";
+				_isLoading = false;
+			}
+		}
+		catch ( Exception ex)
+		{
+
+			//throw;
+			_isLoading = false;
+			errorMasage = ex.Message;
+		}
+	}
+}

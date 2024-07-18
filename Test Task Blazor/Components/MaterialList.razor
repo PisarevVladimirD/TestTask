@@ -1,0 +1,30 @@
+﻿<ul class="list-unstyled">
+    @foreach (var material in Materials)
+    {
+        var categoryTitle = $"{material.Id} Id материала";
+        var categoryPostsLink = $"/c/{material.ProposalMaterial.Id}/materials";
+        var color = Utilities.GetRandomColorClass();
+
+        var detailPageUrl = $"/materials/{material.Id}";
+        
+        <li class="mb-3">
+            <div class="row">
+                <div class="col-sm-2 bg-@color rounded d-flex justify-content-center align-items-center">
+                    <label class="fs-1 text-uppercase text-white">@Utilities.GetInitials(material.MaterialName)</label>
+                </div>
+                <div class="col-sm-10 bg-@color bg-opacity-10">
+                    <h2>
+                    <NavLink href="@detailPageUrl" class="text-decoration-none text-dark fs-5" title="@material.MaterialName">@material.MaterialName</NavLink>
+                    </h2>
+
+                    <p class="fs-6">@material.Comment</p>
+                </div>
+            </div>
+        </li>
+    }
+</ul>
+
+@code {
+    [Parameter]
+    public IEnumerable<ProposalMaterial> Materials { get; set; } = Enumerable.Empty<ProposalMaterial>();
+}

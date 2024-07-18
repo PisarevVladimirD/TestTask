@@ -1,0 +1,83 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Test_Task_Blazor
+build_property.RootNamespace = Test_Task_Blazor
+build_property.ProjectDir = E:\Repos\C#\Test Task Blazor\Test Task Blazor\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Repos\C#\Test Task Blazor\Test Task Blazor
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Components/MaterialList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNYXRlcmlhbExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Components/SaveTaskForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTYXZlVGFza0Zvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Pages/Manage-materials.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlLW1hdGVyaWFscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Pages/Manage-tasks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlLXRhc2tzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Pages/MaterialDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWF0ZXJpYWxEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Pages/NumericEdi.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTnVtZXJpY0VkaS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Pages/NumericEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTnVtZXJpY0VkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Pages/ProposalMaterialSave.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvcG9zYWxNYXRlcmlhbFNhdmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Pages/ProposalSave.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvcG9zYWxTYXZlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Shared/TopNavBar.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFRvcE5hdkJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-uxnpixj21q
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Repos/C\#/Test Task Blazor/Test Task Blazor/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
