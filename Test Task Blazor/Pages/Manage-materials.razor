@@ -36,16 +36,16 @@
 		else
 		{
 			int sno = 1;
-			@foreach (var proposalMaterial in _proposalMaterial!)
+			@foreach (var proposalMaterials in _proposalMaterial!)
 			{
-				var editMaterialLink = $"/manage-materials/edit/{proposalMaterial.Id:int?}";
+				var editMaterialLink = $"/manage-materials/edit/{proposalMaterials.Id:int?}";
 
 				<tr>
 					<td>@(sno++)</td>
-					<td>@proposalMaterial.Id</td>
-					<td>@proposalMaterial.MaterialName</td>
-					<td>@proposalMaterial.Quantity</td>
-					<td>@proposalMaterial.Comment</td>
+					<td>@proposalMaterials.Id</td>
+					<td>@proposalMaterials.MaterialName</td>
+					<td>@proposalMaterials.Quantity</td>
+					<td>@proposalMaterials.Comment</td>
 					<td><NavLink href="@editMaterialLink" class="btn btn-primary btn-sm">Редактировать</NavLink></td>
 				</tr>
 			}
