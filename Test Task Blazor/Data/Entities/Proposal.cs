@@ -21,7 +21,7 @@ namespace Test_Task_Blazor.Data.Entities
         {
             get
             {
-                return $"{CreationDate.Year % 100:00}/{ProposalNumber:0000}";
+                return $"{CreationDate:yy}/{ProposalNumber:0000}";
             }
         }
         [Required]
